@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marks Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .heading{
+            font-weight: 100;
+            font-size: 4em;
+            text-shadow: 1px 1px 5px black;
+        }
+        .text{
+            font-size: 32px;
+            font-style: italic;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="heading">Marks Prediction</h1>
+            <p>Tell the number of hours you studied to check your performance.....</p>
+        </div>
+    </div>
+    <form class="form-inline" action="/" method="POST">
+        Enter Time Duration You Worked : &nbsp; <input class="form-control" type="text" name="hours" placeholder="Hours">
+        &nbsp;&nbsp;<button type="submit" class="btn btn-primary">Get Score</button>
+    </form>
+    <br>
+    {% if your_marks %}
+    <div>
+             <p class="text">
+                 Your Marks Are : <i><b>{{ your_marks }}</b></i>
+             </p>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
