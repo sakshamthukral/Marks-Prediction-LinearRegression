@@ -15,7 +15,7 @@ def marks():
     if request.method == 'POST':
         hours = float(request.form['hours'])
 
-        marks = str(model.predict([[hours]])[0][0]) # [0][0] indexing is done to get the firs value of 2-d matrix
+        marks = str(model.predict([[hours]])[0][0]/10) # [0][0] indexing is done to get the firs value of 2-d matrix
 
     return render_template("index.html", your_marks=marks)
 
